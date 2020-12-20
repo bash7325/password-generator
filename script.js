@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 // variables defined
 
 
-var lowerCase = "abcdefghijklmnopqrstuvexyz";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = " ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var special = "!@#$^&%*()+=-[]{}|:<>?,.'";
 var numbers = "1234567890"
@@ -19,42 +19,47 @@ function generatePassword() {
     var passwordSet = "";
 
     var passwordLengthSet = prompt("How long would you like your password to be? HINT: must be between 8 and 128 characters.");
-
+//set password length, if value is outside parameters or blank return to start
     if (Number(passwordLengthSet < 8) | Number(passwordLengthSet > 128) | isNaN(passwordLengthSet)) {
         alert("Enter a number between 8 and 128");
         return;
     }
-
-    var lowerCaseSet = confirm("If you would include lower case letters click OK, if not click cancel.")
+    console.log(passwordLengthSet)
+//confirms and sets for charectors and numbers
+    var lowerCaseSet = confirm("Include lower case letters? click OK for yes, if no click cancel.")
 
     if (lowerCaseSet) {
       passwordSet += lowerCase;
     }
-
-    var upperCaseSet = confirm("If you would include upper case letters click OK, if not click cancel.")
+    console.log(lowerCaseSet)
+    var upperCaseSet = confirm("Include upper case letters? click OK for yes, if no click cancel.")
 
     if (upperCaseSet) {
       passwordSet += upperCase;
     }
-
-    var specialSet = confirm("If you would include special characters click OK, if not click cancel.")
+    console.log(upperCaseSet)
+    var specialSet = confirm("Include special characters? click OK for yes, if no click cancel.")
 
     if (specialSet) {
       passwordSet += special;
     }
-
-    var numbersSet = confirm("If you would include numbers click OK, if not click cancel.")
+    console.log(specialSet)
+    var numbersSet = confirm("Include numbers? click OK for yes, if no click cancel.")
 
     if (numbersSet) {
-      passwordSet += lowerCase;
+      passwordSet += numbers;
     }
-
+//if all confirms are no, tell user they must select at least one
     else {
       passwordSet === ("")
       alert("You must select at least one to continue...");
   }
 console.log(passwordSet)
-
+//for loop to randomize collected data
+if (Number(passwordLengthSet >= 8) && Number(passwordLengthSet <= 128)) {
+  for (var i = 0; i < passwordLengthSet; i++) {
+      password += passwordSet.charAt(Math.floor(Math.random() * passwordSet.length));
+  };
 
 // Write password to the #password input
 function writePassword() {
@@ -63,8 +68,4 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 }
