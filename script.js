@@ -16,8 +16,8 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
 
-  var passwordSet = ("");
-  var newPassword = ("");
+  var passwordSet = "";
+  var newPassword = "";
 
   var passwordLengthSet = prompt("How long would you like your password to be? HINT: must be between 8 and 128 characters.");
   //set password length, if value is outside parameters or blank return to start
@@ -26,7 +26,7 @@ function generatePassword() {
     return;
   }
 
-  console.log(passwordLengthSet);
+  // console.log(passwordLengthSet);
   //confirms and if statements for characters and numbers
   var lowerCaseSet = confirm("Include lower case letters? click OK for yes, if no click cancel.");
 
@@ -66,10 +66,10 @@ function generatePassword() {
   }
   return newPassword;
 }
-  // Function to write password to the text box
-  function writePassword() {
-    var newPassword = generatePassword();
-    var passwordText = document.querySelector("#password");
-    passwordText.value = newPassword;
-  }
+// Function to write password to the text box
+function writePassword() {
+  var newPassword = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = newPassword;
+}
 

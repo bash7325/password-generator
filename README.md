@@ -22,7 +22,7 @@
 
 [Password Generator](https://bash7325.github.io/password-generator/)
 
-# Link to GitHub repo
+# Link to GitHub Repository
 
 [Brandon Ashby GitHub](https://github.com/bash7325/password-generator)
 
