@@ -18,6 +18,12 @@
 - [Stack Overflow](https://stackoverflow.com/)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+# Tewchnologies used
+
+- HTML
+- CSS
+- JavaScript
+
 # Deployed project link
 
 [Password Generator](https://bash7325.github.io/password-generator/)
