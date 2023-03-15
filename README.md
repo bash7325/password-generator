@@ -38,3 +38,5 @@
 ![Prompts](https://i.imgur.com/AvpWQDs.png)
 ![New Password](https://i.imgur.com/QAqrGLA.png)
 ![Criteria not met alert](https://i.imgur.com/q3ZM5hS.png)
+
+Made with love by Brandon
